@@ -48,7 +48,35 @@ The objective of this project is to:
 
 ---
 
-## ▶️ How to Run
-```bash
-python3 linux_hardening_audit.py
+##  How to Run
+
+The project was developed and tested on Kali Linux using Python 3.
+
+First, verify that Python 3 is installed:
+
+    python3 --version
+
+If Python 3 is not available, install it using:
+
+    sudo apt update
+    sudo apt install python3
+
+Create a project directory and navigate into it:
+
+    mkdir linux-hardening-audit
+    cd linux-hardening-audit
+
+Create the Python file for the audit tool:
+
+    nano linux_hardening_audit.py
+
+Paste the complete source code into the file and save it. Then run the tool using:
+
+    python3 linux_hardening_audit.py
+
+The tool checks firewall status, SSH configuration, sensitive file permissions, presence of insecure services, and automatic update settings. It displays PASS/FAIL results with severity levels, provides security recommendations, calculates an overall security score, and saves the output to an audit report file.
+
+A low score is expected on Kali Linux, as it is designed for penetration testing rather than system hardening. The tool is safe to run, requires no root access, and makes no changes to the system.
+
+
 
